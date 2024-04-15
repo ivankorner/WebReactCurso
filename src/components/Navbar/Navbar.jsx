@@ -1,6 +1,7 @@
 import logo from "../../assets/logo.png";
 import CartWidget from "../CartWidget/CartWidget";
 
+
 const Navbar = () => {
   return (
     <header>

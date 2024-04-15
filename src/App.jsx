@@ -4,6 +4,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import Footer from "./components/Footer/Footer.jsx"
 
+//Props
+const nombreWeb = {
+  titulo: "App Center"
+}
 
 function App() {  
 
@@ -11,7 +15,7 @@ function App() {
     <>
       <Navbar/>
 
-      <Container/>   
+      <Container {...nombreWeb} />   
       <Footer/>
     </>
   )

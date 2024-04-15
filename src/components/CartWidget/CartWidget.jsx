@@ -6,7 +6,7 @@ const CartWidget = () => {
         <span>
         <i className="bi bi-cart"></i>
         </span>
-        <span> 3 </span>
+        <span> 0</span>
         
         
         </div>
