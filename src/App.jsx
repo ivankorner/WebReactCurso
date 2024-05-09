@@ -7,6 +7,7 @@ import Footer from "./components/Layout/Footer/Footer.jsx"
 import Cart from "./components/Cart/Cart.jsx"
 import Error from "./components/Error/Error.jsx"
 import Productos from "./components/Productos/Productos.jsx"
+import ItemDetailContainer from "../src/components/ItemDetailContainer/ItemDetailContainer.jsx"
 
 
 function App() {  
@@ -18,7 +19,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/Cart" element={<Cart/>}/>
           <Route path="/category/:categoryId" element={<Productos/>}/> 
-          <Route path="/productos/:prodId" element={<ItemDetailContainer/>}/>       
+          <Route path="/products/:prodId" element={<ItemDetailContainer/>}/>
           <Route path="*" element={<Error/>}/>
         </Routes>
         <Footer/>       

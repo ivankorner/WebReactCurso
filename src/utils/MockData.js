@@ -96,11 +96,12 @@ export const getProductsByCategory = (categoryId) => {
   });
 };
 
-export const getProductsById = (categoryId) => {
+export const getProductById = (productId) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(products.find((elem) => elem.type === categoryId));
-
+      console.log(productId)
+      const product = products.find((elem) => elem.id === parseInt(productId));
+      resolve(product)
       //reject
     }, 1000);
   });

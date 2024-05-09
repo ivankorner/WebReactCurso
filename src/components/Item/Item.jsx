@@ -6,7 +6,7 @@ const Item = ({ nombre, id, type, precio, stock, descripcion, image }) => {
   
 
   const handleOnClick = () => {
-    console.log("click");
+    
   }
     
   
