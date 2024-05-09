@@ -1,6 +1,6 @@
 export const products = [
   {
-    nombre: "Samsung Galaxy Z Flip5 Cream",
+    nombre: "Samsung Galaxy Z Flip5",
     id: 1,
     type: "Importado",
     precio: 180000,
@@ -10,41 +10,41 @@ export const products = [
    
   },
   {
-    nombre: "Samsung Galaxy A34 5g Lime",
+    nombre: "Samsung Galaxy A34 5g",
     id: 2,
     type: "Importado",
     precio: 330000,
     stock: 5,
     descripcion:"Capacidad de la batería: 5,000 mAh, Generación de banda ancha: 5G, Fuente de luz de la cámara: Luz LED, Red móvil: CDMA, GSM, Prepago, Wcdma, Wlan",
-      image: "https://i.postimg.cc/QN9ZYXt9/2.png",
+      image: "https://i.postimg.cc/7PtQVfdz/2.png",
   },
   {
-    nombre: "XIAOMI REDMI Ocean Blue",
-    id: 2,
+    nombre: "XIAOMI REDMI 10C",
+    id: 3,
     type: "Importado",
     precio: 290000,
     stock: 5,
     descripcion: "Pantalla IPS de 6.71, Tiene 2 cámaras traseras de 50Mpx/2Mpx, Cámara delantera de 5Mpx, Procesador Snapdragon 680 Octa-Core de 2.4GHz con 4GB de RAM, Batería de 5000mAh,    Memoria interna de 128GB",
-    image: "https://i.postimg.cc/Pfm25cVV/3.png",
+    image: "https://i.postimg.cc/T1K0SJFD/3.png",
   },
   {
-    nombre: "Alcatel 1 Ultra 32 GB negro 1 GB RAM",
+    nombre: "Alcatel 1 Ultra",
     id: 4,
     type: "Nacional",
     precio: 58000,
     stock: 4,
     descripcion: "Pantalla IPS de 5, Cámara delantera de 2Mpx, Procesador MediaTek MT6739 Quad-Core de 1.3GHz con 1GB de RAM, Batería de 2000mAh, Memoria interna de 32GB",
-      image: "https://i.postimg.cc/J4Jb7BTN/4.png",
+      image: "https://i.postimg.cc/G3466FkK/4.png",
     
   },
   {
-    nombre: "Celular Zte Blade A72s 128/4 Gb Sky Blue Color Celeste",
+    nombre: "Zte Blade A72s",
     id: 5,
     type: "Nacional",
     precio: 254000,
     stock: 5,
     descripcion: "Pantalla de 6.75, Cámara delantera de 5Mpx, Batería de 5000mAh, Memoria interna de 128GB.",
-      image: "https://i.postimg.cc/h4QmMdRk/5.png",
+      image: "https://i.postimg.cc/YSXys00T/5.png",
   },
   {
     nombre: "Motorola Moto G42",
@@ -53,7 +53,7 @@ export const products = [
     precio: 364000,
     stock: 7,
     descripcion: "Memoria RAM: 4 GB, Pantalla OLED de 6.4, 3 cámaras traseras de 50Mpx/8Mpx/2Mpx, Cámaras delanteras de 16Mpx, Procesador Snapdragon 680 4G Octa-Core de 2.4GHz con 4GB de RAM",
-      image: "https://i.postimg.cc/NfzCrTY5/6.png",
+      image: "https://i.postimg.cc/7Ygtymb3/6.png",
   },
   {
     nombre: "TCL 40 SE",
@@ -62,16 +62,16 @@ export const products = [
     precio: 170000,
     stock: 3,
     descripcion: "Pantalla IPS de 6.75, Tiene 3 cámaras traseras de 50Mpx/2Mpx/2Mpx, Cámara delantera de 8Mpx, Procesador MediaTek MT6765 Helio G37 Octa-Core de 2.3GHz con 6GB de RAM, Batería de 5010mAh, Memoria interna de 256GB.",
-    image: "https://i.postimg.cc/cH0FNB75/7.png",
+    image: "https://i.postimg.cc/Rhwd4ZCS/7.png",
   },
   {
-    nombre: "Noblex A50+ Dual SIM",
+    nombre: "Noblex A50+",
     id: 8,
     type: "Nacional",
     precio: 120000,
     stock: 3,
     descripcion: "Pantalla de 5, Cámara delantera de 5Mpx, Procesador Unisoc SC9832E Quad-Core de 1.4GHz con 2GB de RAM, Batería de 2050mAh, Memoria interna de 32GB.",
-    image: "https://i.postimg.cc/wxW0SJ10/8.png",
+    image: "https://i.postimg.cc/xTy5Z8Fg/8.png",
   },
   
 ]

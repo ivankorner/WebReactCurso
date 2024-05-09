@@ -14,18 +14,30 @@ const ItemCount = () => {
   };
 
   const handlleAddToCart = () => {
-    console.log(`Se agregaron ${cantItems} al carrito`)
-  }
+    console.log(`Se agregaron ${cantItems} al carrito`);
+  };
 
   return (
     <>
       <div>Cantidad</div>
       <div>
-        <button onClick={handlleAdd}> + </button>
+        <button className="btn btn-secondary" onClick={handlleSubs}>
+          {" "}
+          -{" "}
+        </button>
         <span> {cantItems} </span>
-        <button onClick={handlleSubs}> - </button>
+
+        <button className="btn btn-secondary" onClick={handlleAdd}>
+          {" "}
+          +{" "}
+        </button>
       </div>
-      <button className="bnt btn-success" onClick={handlleAddToCart}>Agregar al Carrito</button>
+      <br />
+      <div>
+        <button className="btn btn-success" onClick={handlleAddToCart}>
+          Agregar al Carrito
+        </button>
+      </div>
     </>
   );
 };

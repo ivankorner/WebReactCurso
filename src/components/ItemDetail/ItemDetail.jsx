@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card";
-import ItemCount from "../ItemCount/ItemCount"
-
+import ItemCount from "../ItemCount/ItemCount";
+import styles from "./ItemDetail.module.css";
 
 const ItemDetail = ({
   nombre,
@@ -12,26 +12,42 @@ const ItemDetail = ({
   image,
 }) => {
   return (
-    <div>
+    <>
+      <br />
+      <h2 className=" text-center">Detalles del Producto</h2>
 
-      <h2>Detalles del Producto</h2>
-      <Card style={{ width: "20rem" }}>
-        <Card.Img variant="top" src={image} />
-        <Card.Body>
-          <Card.Title>{nombre}</Card.Title>
-          <Card.Text>{descripcion}</Card.Text>
-          <Card.Text>Procedencia: {type}</Card.Text>
-          <Card.Text>Precio: $ {precio}</Card.Text>
-          <Card.Text>Stock: {stock}</Card.Text>
-          <ItemCount/>
-          <br />
-          <br />
-          <button className="btn btn-warning">Comprar</button>
+      <div className={styles.itemDatalles}>
+        <Card
+          className="align-content-center text-center"
+          style={{ width: "20rem" }}
+        >
+          <div className=" row justify-content-md-center">
+            <Card.Img
+              variant="top"
+              src={image}
+              className="justify-content-center object-fit-cover"
+              style={{ width: "60%" }}
+            />
+          </div>
 
+          <Card.Body>
+            <Card.Title className="text-center">
+              <h3>{nombre}</h3>
+            </Card.Title>
+            <Card.Text>
+              <Card.Text>{descripcion}</Card.Text>
+              <p>Procedencia: {type}</p>
+              <h4>Precio: ${precio}</h4>
+              <Card.Text>Stock: {stock}</Card.Text>
+            </Card.Text>
 
-        </Card.Body>
-      </Card>
-    </div>
+            <ItemCount />
+            <br />
+            <br />
+          </Card.Body>
+        </Card>
+      </div>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-.itemlist {
+.itemDatalles {
     display: flex;
     flex-direction: col;
     gap: 20px;
@@ -7,4 +7,4 @@
     justify-content:center;
     margin-top: 50px;
     margin-bottom: 50px;
-  }
+}
