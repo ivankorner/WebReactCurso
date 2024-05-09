@@ -1,24 +1,29 @@
-import Navbar from "./components/Navbar/Navbar.jsx"
-import Container from "./components/Container/Container.jsx"
-import 'bootstrap/dist/css/bootstrap.css'
+import Home from "./Pages/Home/Home.jsx"
+import "./../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import Footer from "./components/Footer/Footer.jsx"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Navbar from "./components/Layout/Navbar/Navbar.jsx"
+import Footer from "./components/Layout/Footer/Footer.jsx"
+import Cart from "./components/Cart/Cart.jsx"
+import Error from "./components/Error/Error.jsx"
+import Productos from "./components/Productos/Productos.jsx"
 
-//Props
-const nombreWeb = {
-  titulo: "App Center"
-}
 
 function App() {  
 
   return (
-    <>
+    <BrowserRouter>
       <Navbar/>
-
-      <Container {...nombreWeb} />   
-      <Footer/>
-    </>
-  )
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Cart" element={<Cart/>}/>
+          <Route path="/category/:categoryId" element={<Productos/>}/> 
+          <Route path="/productos/:prodId" element={<ItemDetailContainer/>}/>       
+          <Route path="*" element={<Error/>}/>
+        </Routes>
+        <Footer/>       
+    </BrowserRouter>
+  );
 }
 
 export default App

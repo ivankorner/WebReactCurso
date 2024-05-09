@@ -7,7 +7,7 @@ const Container = (props) => {
 
   return (
     <>
-      <div className={styles.area}>
+      <div>
         <h1 className={styles.h1}>{props.titulo ? props.titulo : mensaje }</h1>
       </div>
       <Productos/>

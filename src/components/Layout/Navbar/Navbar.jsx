@@ -1,6 +1,6 @@
-import logo from "../../assets/logo.png";
-import CartWidget from "../CartWidget/CartWidget";
-
+import logo from "../../../assets/logo.png";
+import CartWidget from "../../CartWidget/CartWidget";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -28,22 +28,28 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="#">
-                  Productos
-                </a>
-              </li>
+              <a className="nav-link " aria-current="page">
+              <Link to="/">Home</Link>
+                </a> 
+               </li>
+               
               <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="#">
-                  Nosotros
-                </a>
-              </li>
+              <a className="nav-link " aria-current="page">
+              <Link to="/category/Nacional">Nacionales</Link>
+                </a> 
+              </li>   
               <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="#">
-                  Contacto
-                </a>
-              </li>
+              <a className="nav-link " aria-current="page">
+              <Link to="/category/Importado">Importados</Link>
+                </a> 
+              </li> 
+              <li className="nav-item">
+              <a className="nav-link " aria-current="page">
+              <Link to="/Cart">Cart</Link>
+                </a> 
+              </li>             
             </ul>
-            <CartWidget/>
+            
           </div>
           
         </div>
@@ -54,3 +60,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

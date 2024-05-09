@@ -1,0 +1,9 @@
+.itemlist {
+    display: flex;
+    flex-direction: col;
+    gap: 20px;
+    flex-wrap: wrap;    
+    background-color: bisque;    
+    align-items: center;
+    justify-content:center;
+  }

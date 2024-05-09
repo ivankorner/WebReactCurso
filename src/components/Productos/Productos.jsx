@@ -1,11 +1,51 @@
-import producto1 from "../../assets/producto1.jpg";
-import producto2 from "../../assets/producto2.jpg";
-import producto3 from "../../assets/producto3.jpg";
-import styles from "./Productos.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getProducts, getProductsByCategory } from "../../utils/MockData";
+import ItemList from "../ItemList/ItemList";
+import { DNA } from "react-loader-spinner";
+import { useParams } from "react-router-dom";
+import { usePaginate } from "../../hooks/usePaginate";
 
 const Productos = () => {
   const [productoAgregado, setProductoAgregado] = useState(0);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { categoryId } = useParams();
+
+
+
+  const itemsPerPage = 2;
+
+  const {
+    currentPage,
+    totalPages,
+    nextPage,
+    prevPage,
+    paginate,
+    totalPagesArray,
+    currentData,
+  } = usePaginate(products, itemsPerPage);
+
+
+
+
+  useEffect(() => {
+    setLoading(true);
+    if (categoryId) {
+      getProductsByCategory(categoryId).then((res) => {
+        setProducts(res);
+        setLoading(res);
+      });
+    } else {
+      getProducts()
+        .then((res) => {
+          setProducts(res);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }, [categoryId]);
 
   const agregar = () => {
     productoAgregado > 0
@@ -15,43 +55,34 @@ const Productos = () => {
 
   return (
     <>
-      <div className={styles.productos}>
-        {/* Card Producto 1*/}
-        <div className={styles.tarjeta}>
-          <div className={styles.titulo}>Samsung Galaxy Z Flip5 Cream</div>
-          <div className={styles.cuerpo}>
-            <img className={styles.img} src={producto1} alt="muestra" />
-            $2.009.999
-          </div>
-          <div className={styles.pie}>
-            <a href="#">Comprar</a>
-          </div>
+      {loading === true ? (
+        <DNA />
+      ) : (
+        <div>
+          <ItemList productsList={currentData} />
+          <button onClick={prevPage}>Anterior</button>
+          {totalPagesArray.map((page) => {
+            if (page < 6) {
+              return (
+                <button key={page} onClick={() => paginate(page)}>
+                  {page}
+                </button>
+              );
+            }
+            if (page === 6) {
+              return "...";
+            }
+            if (page === totalPages) {
+              return (
+                <button key={page} onClick={() => paginate(page)}>
+                  {page}
+                </button>
+              );
+            }
+          })}
+          <button onClick={nextPage}>Siguiente</button>
         </div>
-
-        {/* Card Producto 2*/}
-        <div className={styles.tarjeta}>
-          <div className={styles.titulo}>Samsung Galaxy A34 5g Lime</div>
-          <div className={styles.cuerpo}>
-            <img className={styles.img} src={producto2} alt="muestra" />
-            $700.00
-          </div>
-          <div className={styles.pie}>
-            <a href="#">Comprar</a>
-          </div>
-        </div>
-
-        {/* Card Producto 3*/}
-        <div className={styles.tarjeta}>
-          <div className={styles.titulo}>XIAOMI REDMI Ocean Blue</div>
-          <div className={styles.cuerpo}>
-            <img className={styles.img} src={producto3} alt="muestra" />
-            $230.000
-          </div>
-          <div className={styles.pie}>
-            <a href="#">Comprar</a>
-          </div>
-        </div>
-      </div>
+      )}
     </>
   );
 };
