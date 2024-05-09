@@ -5,7 +5,7 @@ export const products = [
     type: "Importado",
     precio: 180000,
     stock: 3,
-    descripcion: "Capacidad de la batería: 3,700 mAh, Material del cuerpo: Aluminio, Vidrio, Generación de banda ancha: 5G,  Red móvil: CDMA, GSM, Prepago, Wcdma, Wlan",
+    descripcion: "Capacidad de la batería: 3,700 mAh, Material del cuerpo: Aluminio, Vidrio, Generación de banda ancha: 5G,  Red móvil: CDMA, GSM, Wcdma, Wlan",
     image: "https://i.postimg.cc/BbVZrN7v/1.png",
    
   },
@@ -15,7 +15,7 @@ export const products = [
     type: "Importado",
     precio: 330000,
     stock: 5,
-    descripcion:"Capacidad de la batería: 5,000 mAh, Generación de banda ancha: 5G, Fuente de luz de la cámara: Luz LED, Red móvil: CDMA, GSM, Prepago, Wcdma, Wlan",
+    descripcion:"Capacidad de la batería: 5,000 mAh, Generación de banda ancha: 5G, Fuente de luz de la cámara: Luz LED, Red móvil: CDMA, GSM, Wcdma, Wlan",
       image: "https://i.postimg.cc/7PtQVfdz/2.png",
   },
   {
@@ -24,7 +24,7 @@ export const products = [
     type: "Importado",
     precio: 290000,
     stock: 5,
-    descripcion: "Pantalla IPS de 6.71, Tiene 2 cámaras traseras de 50Mpx/2Mpx, Cámara delantera de 5Mpx, Procesador Snapdragon 680 Octa-Core de 2.4GHz con 4GB de RAM, Batería de 5000mAh,    Memoria interna de 128GB",
+    descripcion: "Pantalla IPS de 6.71, Tiene 2 cámaras traseras de 50Mpx/2Mpx, Cámara delantera de 5Mpx, Procesador Snapdragon 680 Octa-Core de 2.4GHz con 4GB de RAM, Batería de 5000mAh, Memoria interna de 128GB",
     image: "https://i.postimg.cc/T1K0SJFD/3.png",
   },
   {
@@ -43,7 +43,7 @@ export const products = [
     type: "Nacional",
     precio: 254000,
     stock: 5,
-    descripcion: "Pantalla de 6.75, Cámara delantera de 5Mpx, Batería de 5000mAh, Memoria interna de 128GB.",
+    descripcion: "Pantalla de 6.75, Cámara delantera de 5Mpx, Batería de 5000mAh, Memoria interna de 128GB",
       image: "https://i.postimg.cc/YSXys00T/5.png",
   },
   {

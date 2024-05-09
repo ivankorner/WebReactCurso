@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
     }, [prodId]);
 
   return loading === true ? (
-        <DNA />
+    <div className="text-center"> <DNA /> </div>
       ) : (
         <div>
           <ItemDetail {...product} />

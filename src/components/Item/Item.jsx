@@ -14,7 +14,7 @@ const Item = ({ nombre, id, type, precio, descripcion, image }) => {
       <Card.Img
         variant="top"
         src={image}
-        className="justify-content-center object-fit-cover"
+        className="justify-content-center"
         style={{ width: "60%"}}
       />
 

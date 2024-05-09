@@ -5,6 +5,7 @@ import { DNA } from "react-loader-spinner";
 import { useParams } from "react-router-dom";
 import { usePaginate } from "../../hooks/usePaginate";
 
+
 const Productos = () => {
   const [productoAgregado, setProductoAgregado] = useState(0);
   const [products, setProducts] = useState([]);
@@ -56,15 +57,19 @@ const Productos = () => {
   return (
     <>
       {loading === true ? (
-        <DNA />
+
+
+
+        <div className="text-center"> <DNA /> </div>
+        
       ) : (
-        <div>
+        <div className="text-center" style={{marginBottom:"20px"}}>
           <ItemList productsList={currentData} />
-          <button onClick={prevPage}>Anterior</button>
+          <button className="btn btn-dark" onClick={prevPage}>Anterior</button>
           {totalPagesArray.map((page) => {
             if (page < 6) {
               return (
-                <button key={page} onClick={() => paginate(page)}>
+                <button  className="btn btn-secondary" style={{color: "black", fontWeight: "500"}} key={page} onClick={() => paginate(page)}>
                   {page}
                 </button>
               );
@@ -80,7 +85,7 @@ const Productos = () => {
               );
             }
           })}
-          <button onClick={nextPage}>Siguiente</button>
+          <button className="btn btn-dark" onClick={nextPage}>Siguiente</button>
         </div>
       )}
     </>

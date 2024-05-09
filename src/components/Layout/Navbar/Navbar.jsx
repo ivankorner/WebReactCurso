@@ -2,6 +2,7 @@ import logo from "../../../assets/logo.png";
 import CartWidget from "../../CartWidget/CartWidget";
 import { Link, NavLink } from "react-router-dom";
 
+
 const Navbar = () => {
   return (
     <header>
@@ -28,7 +29,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-              <a className="nav-link " aria-current="page">
+              <a className="nav-link" aria-current="page">
               <Link to="/">Home</Link>
                 </a> 
                </li>

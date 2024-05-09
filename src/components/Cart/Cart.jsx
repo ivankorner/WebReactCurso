@@ -1,6 +1,12 @@
+import comingsoon from "../../assets/comingsoon.jpg"
+
+
 const Cart = () => {
   return (
-    <div>Esto es Cart</div>
+    <div><div className="justify-content-center text-center">
+    <img  src={comingsoon} style={{width: "60%"}} alt="Error404" />
+    
+  </div></div>
   )
 }
 

@@ -1,6 +1,11 @@
+import errorimg from "../../assets/error404.jpg"
+
 const Error = () => {
   return (
-    <div>Pagina en Construccíon</div>
+    <div className="justify-content-center text-center">
+      <img  src={errorimg} style={{maxWidth:"500px"}} alt="Error404" />
+      
+    </div>
   )
 }
 
