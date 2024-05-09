@@ -1,4 +1,7 @@
 import Card from "react-bootstrap/Card";
+import ItemCount from "../ItemCount/ItemCount"
+
+
 const ItemDetail = ({
   nombre,
   id,
@@ -19,8 +22,13 @@ const ItemDetail = ({
           <Card.Text>{descripcion}</Card.Text>
           <Card.Text>Procedencia: {type}</Card.Text>
           <Card.Text>Precio: $ {precio}</Card.Text>
-
           <Card.Text>Stock: {stock}</Card.Text>
+          <ItemCount/>
+          <br />
+          <br />
+          <button className="btn btn-warning">Comprar</button>
+
+
         </Card.Body>
       </Card>
     </div>

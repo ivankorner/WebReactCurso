@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
 
-const Item = ({ nombre, id, type, precio, stock, descripcion, image }) => {
+const Item = ({ nombre, id, type, precio, descripcion, image }) => {
   
 
   const handleOnClick = () => {
@@ -17,7 +17,7 @@ const Item = ({ nombre, id, type, precio, stock, descripcion, image }) => {
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title>{nombre}</Card.Title>
-        <Card.Text>{descripcion}</Card.Text>
+        
         <Card.Text>Procedencia: {type}</Card.Text>
         <Card.Text>Precio: $ {precio}</Card.Text>
         
