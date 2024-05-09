@@ -30,7 +30,7 @@ export const products = [
   {
     nombre: "Alcatel 1 Ultra 32 GB negro 1 GB RAM",
     id: 4,
-    type: "Importado",
+    type: "Nacional",
     precio: 58000,
     stock: 4,
     descripcion: "Pantalla IPS de 5, Cámara delantera de 2Mpx, Procesador MediaTek MT6739 Quad-Core de 1.3GHz con 1GB de RAM, Batería de 2000mAh, Memoria interna de 32GB",

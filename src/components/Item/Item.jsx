@@ -13,13 +13,17 @@ const Item = ({ nombre, id, type, precio, descripcion, image }) => {
   return (
     
 
-      <Card style={{ width: "20rem" }}>
-      <Card.Img variant="top" src={image} />
+      <Card  className="align-content-center text-center" style={{ width: "20rem" }}>
+      <Card.Img variant="top" src={image}  style={{width: "50%"}}/>
       <Card.Body>
-        <Card.Title>{nombre}</Card.Title>
+        <Card.Title className="text-center">          
+          <h3>{nombre}</h3>    
+        </Card.Title>        
+        <Card.Text>
+          <p>Procedencia: {type}</p>
+          <h4>Precio: ${precio}</h4>
+        </Card.Text>
         
-        <Card.Text>Procedencia: {type}</Card.Text>
-        <Card.Text>Precio: $ {precio}</Card.Text>
         
         <br />  
 
