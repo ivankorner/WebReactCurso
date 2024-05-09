@@ -27,7 +27,7 @@ const Item = ({ nombre, id, type, precio, stock, descripcion, image }) => {
 
 
 
-        <Card.Text>Stock: {stock}</Card.Text>
+        
       </Card.Body>
     </Card>
   );
